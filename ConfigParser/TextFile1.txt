@@ -1,0 +1,16 @@
+﻿; ここはコメント
+; ここもコメント
+[section]
+item=value
+
+[セクション]
+item1=value1
+item2=value2
+
+; こめんと
+[せくしょん１２３]
+item11=value11
+
+; こめんとだよ
+item22=value22
+item33=value33
