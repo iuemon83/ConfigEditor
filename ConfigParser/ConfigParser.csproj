@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConfigParser</RootNamespace>
     <AssemblyName>ConfigParser</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,13 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigItems\CommentItem.cs" />
-    <Compile Include="ConfigItems\IConfigItem.cs" />
-    <Compile Include="ConfigItems\SectionItem.cs" />
-    <Compile Include="ConfigItems\ValueItem.cs" />
-    <Compile Include="ConfigParser.cs" />
-    <Compile Include="ConfigVisitor.cs" />
+    <Compile Include="ConfigNodes\CommentNode.cs" />
+    <Compile Include="ConfigNodes\ConfigDocument.cs" />
+    <Compile Include="ConfigNodes\IConfigNode.cs" />
+    <Compile Include="ConfigNodes\SectionNode.cs" />
+    <Compile Include="ConfigNodes\ValueNode.cs" />
+    <Compile Include="ConfigWalker.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +63,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile1.txt">
+    <Content Include="Sample.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
